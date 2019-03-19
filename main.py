@@ -1,10 +1,15 @@
 from flask import Flask
-api = Flask(__name__)
+app = Flask(__name__)
 
-@api.route("/")
+@app.route("/")
 
 def hello():
     return "Hello World!"
 
+@app.route("/webhook", methods=['GET', 'POST'])
+def webhook():
+    if request.method == 'POST':
+    return 'OK'
+
 if __name__ == "__main__":
-    api.run()
+    app.run()
