@@ -1,5 +1,4 @@
-from flask import Flask
-import request
+from flask import Flask, request
 api = Flask(__name__)
 
 @api.route("/")
